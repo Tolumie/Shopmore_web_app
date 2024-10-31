@@ -2,15 +2,10 @@
 """
 Created on Wed Feb 30 16:36:10 2024
 
-@author: Tolu
+@author: Tolulope Israel
+
 """
 
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Oct 30 15:38:41 2024
-
-@author: Tolu
-"""
 import sklearn
 #print(sklearn.__version__)
 
