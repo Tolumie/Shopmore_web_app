@@ -24,7 +24,7 @@ def clustering(age, avg_income, spending_score):
     kmeans_model = pickle.load(open("kmeans.pkl", 'rb'))
     new_customer = np.array([[avg_income, spending_score]])  # Updated to use income and spending score
     predicted_cluster = kmeans_model.predict(new_customer)
-   cluster_mapping = {
+    cluster_mapping = {
     0: """Moderate Spenders (Age: Middle-aged, Income: Moderate, Spending: Average).
 
     This group is fairly balanced in terms of spending.
