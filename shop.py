@@ -25,7 +25,7 @@ def clustering(age, avg_income, spending_score):
     new_customer = np.array([[avg_income, spending_score]])  # Updated to use income and spending score
     predicted_cluster = kmeans_model.predict(new_customer)
     cluster_mapping = {
-        0: "Moderate Spenders (Age: Middle-aged, Income: Moderate, Spending: Average)",
+        0: "Moderate Spenders (Age: Middle-aged, Income: Moderate, Spending: Average.<p> This group is fairly balanced in terms of spending. They’re not extravagant but do make purchases regularly)<p/>",
         1: "High Spenders (Age: Young, Income: High, Spending: High)",
         2: "Cautious Savers (Age: Middle-aged, Income: High, Spending: Low)",
         3: "Young Lifestyle Spenders (Age: Youngest, Income: Low, Spending: High)",
