@@ -24,28 +24,34 @@ def clustering(age, avg_income, spending_score):
     kmeans_model = pickle.load(open("kmeans.pkl", 'rb'))
     new_customer = np.array([[avg_income, spending_score]])  # Updated to use income and spending score
     predicted_cluster = kmeans_model.predict(new_customer)
-    cluster_mapping = {
-        0: """Moderate Spenders (Age: Middle-aged, Income: Moderate, Spending: Average).
+   cluster_mapping = {
+    0: """Moderate Spenders (Age: Middle-aged, Income: Moderate, Spending: Average).
 
-            This group is fairly balanced in terms of spending.
-            They’re not extravagant but do make purchases regularly.
-""",
-        1: """High Spenders (Age: Young, Income: High, Spending: High). High-income but cautious spenders.
-        
-        They could be more inclined to save or only spend on items they perceive as valuable.
-        """,
-        2: """Cautious Savers (Age: Middle-aged, Income: High, Spending: Low). 
-        
-        This group exhibits a high income yet shows low spending behavior, indicating a preference for saving or selective purchasing.""",
-        3: """Young Lifestyle Spenders (Age: Youngest, Income: Low, Spending: High). 
-        
-        Despite lower income, this group is willing to spend on experiences and products that resonate with them, especially lifestyle-related items.""",
-        4: """Price-Sensitive (Age: Older, Income: Low, Spending: Low). 
-        
-        This price-sensitive and budget-conscious group is likely to be responsive to value deals and discounts."""
+    This group is fairly balanced in terms of spending.
+    They’re not extravagant but do make purchases regularly.
+    """,
+    1: """High Spenders (Age: Young, Income: High, Spending: High).
+
+    High-income but cautious spenders. They could be more inclined 
+    to save or only spend on items they perceive as valuable.
+    """,
+    2: """Cautious Savers (Age: Middle-aged, Income: High, Spending: Low).
+
+    This group exhibits a high income yet shows low spending behavior, 
+    indicating a preference for saving or selective purchasing.
+    """,
+    3: """Young Lifestyle Spenders (Age: Youngest, Income: Low, Spending: High).
+
+    Despite lower income, this group is willing to spend on experiences 
+    and products that resonate with them, especially lifestyle-related items.
+    """,
+    4: """Price-Sensitive (Age: Older, Income: Low, Spending: Low).
+
+    This price-sensitive and budget-conscious group is likely to be responsive 
+    to value deals and discounts.
+    """
 }
 
-    return cluster_mapping.get(predicted_cluster[0], "Unknown Cluster")
 
 
 # Set up the Streamlit app title
