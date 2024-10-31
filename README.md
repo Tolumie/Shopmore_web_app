@@ -1,5 +1,5 @@
 # Shopmore_web_app
-Shopmore Retail Mall Customer Segmentation  Web app with K-Means
+Shopmore Retail Mall Customer Segmentation  Web app with K-Means deployed on Streamlit Cloud
 
 ShopMore Retail Mall: Customer Segmentation Using K-Means Clustering
 Project Overview and Objective
